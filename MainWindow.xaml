@@ -4,9 +4,42 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YoungEnterprise_Admin_Application"
+        xmlns:controls="clr-namespace:YoungEnterprise_Admin_Application.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="YoungEnterprise Administration Application" Height="600" Width="800">
+    <!-- Replaced the default grid with a dockpanel to allow for the menu to resize properly -->
+    <!-- The grid containing the content is inside the dockpanel below the menu -->
+    <DockPanel>
         
-    </Grid>
+        <!-- The menu below can be changed later on! -->
+        <Menu DockPanel.Dock="Top" Background="#969696" FontFamily="Arial" FontSize="20">
+            <MenuItem Header="Status">
+                <MenuItem x:Name="viewStatus" Header="Se Status" FontSize="12"/>
+            </MenuItem>
+            
+            <MenuItem Header="Resultater">
+                <MenuItem x:Name="viewResultStatus" Header="Vis Resultater" FontSize="12"/>
+                <MenuItem x:Name="createResults" Header="Lav Resultater" FontSize="12"/>
+            </MenuItem>
+            
+            <MenuItem Header="Program">
+                <MenuItem x:Name="createSchedule" Header="Lav Program" FontSize="12"/>
+            </MenuItem>
+            
+            <MenuItem Header="Dommer">
+                <MenuItem x:Name="inviteJudge" Header="Inviter Dommer" FontSize="12"/>
+                <MenuItem x:Name="createJudgePairs" Header="Lav Dommerpar" FontSize="12"/>
+            </MenuItem>
+            
+            <MenuItem Header="Skole">
+                <MenuItem x:Name="inviteSchool" Header="Inviter Skole" FontSize="12"/>
+            </MenuItem>
+        </Menu>
+
+        <Grid DockPanel.Dock="Bottom">
+            <!-- User Controls -->
+            <controls:JudgeInvite Visibility="Visible"/>
+
+        </Grid>
+    </DockPanel>
 </Window>
