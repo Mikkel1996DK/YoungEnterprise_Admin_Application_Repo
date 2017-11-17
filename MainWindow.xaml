@@ -13,8 +13,8 @@
         
         <!-- The menu below can be changed later on! -->
         <Menu DockPanel.Dock="Top" Background="#969696" FontFamily="Arial" FontSize="20">
-
             <MenuItem Header="Brugere">
+                <MenuItem x:Name="viewAllUsers" Header="Vis Alle Brugere" FontSize="12"/>
                 <MenuItem x:Name="inviteSchool" Header="Inviter Skole" FontSize="12"/>
                 <MenuItem x:Name="inviteJudge" Header="Inviter Dommer" FontSize="12"/>
                 <MenuItem x:Name="createJudgePairs" Header="Lav Dommerpar" FontSize="12"/>
