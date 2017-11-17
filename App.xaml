@@ -4,6 +4,37 @@
              xmlns:local="clr-namespace:YoungEnterprise_Admin_Application"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <!-- A style for all the headers in the invite UserControls -->
+        <Style x:Key="inviteHeaderLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="36"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        
+        <!-- A style for the labels in the invite UserControls, specifically the labels used in combination with the textboxes. -->
+        <Style x:Key="inviteSmallLabel" TargetType="Label">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+        </Style>
+
+        <!-- A style for the textboxes in the invite UserControls, specifically the textboxes used in combination with the labels. -->
+        <Style x:Key="inviteTextBox" TargetType="TextBox">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="28"/>
+        </Style>
+
+        <!-- A style for the buttons in the invite UserControls -->
+        <Style x:Key="inviteButton" TargetType="Button">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
     </Application.Resources>
 </Application>

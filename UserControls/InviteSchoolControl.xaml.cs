@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace YoungEnterprise_Admin_Application.UserControls
 {
     /// <summary>
-    /// Interaction logic for JudgeInvite.xaml
+    /// Interaction logic for InviteSchoolControl.xaml
     /// </summary>
-    public partial class JudgeInvite : UserControl
+    public partial class InviteSchoolControl : UserControl
     {
-        public JudgeInvite()
+        public InviteSchoolControl()
         {
             InitializeComponent();
         }

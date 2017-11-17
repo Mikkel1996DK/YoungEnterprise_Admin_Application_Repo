@@ -13,32 +13,30 @@
         
         <!-- The menu below can be changed later on! -->
         <Menu DockPanel.Dock="Top" Background="#969696" FontFamily="Arial" FontSize="20">
-            <MenuItem Header="Status">
-                <MenuItem x:Name="viewStatus" Header="Se Status" FontSize="12"/>
+
+            <MenuItem Header="Brugere">
+                <MenuItem x:Name="inviteSchool" Header="Inviter Skole" FontSize="12"/>
+                <MenuItem x:Name="inviteJudge" Header="Inviter Dommer" FontSize="12"/>
+                <MenuItem x:Name="createJudgePairs" Header="Lav Dommerpar" FontSize="12"/>
             </MenuItem>
-            
+
             <MenuItem Header="Resultater">
                 <MenuItem x:Name="viewResultStatus" Header="Vis Resultater" FontSize="12"/>
                 <MenuItem x:Name="createResults" Header="Lav Resultater" FontSize="12"/>
             </MenuItem>
-            
+
             <MenuItem Header="Program">
                 <MenuItem x:Name="createSchedule" Header="Lav Program" FontSize="12"/>
             </MenuItem>
-            
-            <MenuItem Header="Dommer">
-                <MenuItem x:Name="inviteJudge" Header="Inviter Dommer" FontSize="12"/>
-                <MenuItem x:Name="createJudgePairs" Header="Lav Dommerpar" FontSize="12"/>
-            </MenuItem>
-            
-            <MenuItem Header="Skole">
-                <MenuItem x:Name="inviteSchool" Header="Inviter Skole" FontSize="12"/>
+
+            <MenuItem Header="Status">
+                <MenuItem x:Name="viewStatus" Header="Se Status" FontSize="12"/>
             </MenuItem>
         </Menu>
 
         <Grid DockPanel.Dock="Bottom">
             <!-- User Controls -->
-            <controls:JudgeInvite Visibility="Visible"/>
+            <controls:InviteJudgeControl Visibility="Visible"/>
 
         </Grid>
     </DockPanel>
