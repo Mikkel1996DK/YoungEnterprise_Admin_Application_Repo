@@ -13,18 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace YoungEnterprise_Admin_Application
+namespace YoungEnterprise_Admin_Application.UserControls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ViewUsersControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ViewUsersControl : UserControl
     {
-        //TODO: Have a look at this in order to check how to generate unique passwords for users!
-        // https://stackoverflow.com/questions/54991/generating-random-passwords
-        // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-        public MainWindow()
+        public ViewUsersControl()
         {
             InitializeComponent();
         }

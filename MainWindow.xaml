@@ -36,7 +36,8 @@
 
         <Grid DockPanel.Dock="Bottom">
             <!-- User Controls -->
-            <controls:InviteJudgeControl Visibility="Visible"/>
+            <controls:ViewUsersControl Visibility="Visible"/>
+            <controls:InviteJudgeControl Visibility="Hidden"/>
 
         </Grid>
     </DockPanel>

@@ -6,7 +6,7 @@
     <Application.Resources>
 
         <!-- A style for all the headers in the invite UserControls -->
-        <Style x:Key="inviteHeaderLabel" TargetType="Label">
+        <Style x:Key="headerLabel" TargetType="Label">
             <Setter Property="FontFamily" Value="Arial"/>
             <Setter Property="FontSize" Value="36"/>
             <Setter Property="VerticalAlignment" Value="Bottom"/>

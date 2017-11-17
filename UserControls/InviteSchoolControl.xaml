@@ -24,7 +24,7 @@
         </Grid.RowDefinitions>
 
         <!-- Invite School Label -->
-        <Label Content="Inviter Skole" Grid.Row="0" Grid.Column="1" Style="{StaticResource inviteHeaderLabel}"/>
+        <Label Content="Inviter Skole" Grid.Row="0" Grid.Column="1" Style="{StaticResource headerLabel}"/>
 
         <!-- Name/Email Labels -->
         <Label Content="Navn:" Grid.Column="0" Grid.Row="2" Style="{StaticResource inviteSmallLabel}"/>
