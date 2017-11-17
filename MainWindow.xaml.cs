@@ -20,6 +20,8 @@ namespace YoungEnterprise_Admin_Application
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Test
+
         public MainWindow()
         {
             InitializeComponent();
