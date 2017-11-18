@@ -37,5 +37,11 @@
             <Setter Property="FontSize" Value="28"/>
             <Setter Property="Margin" Value="5"/>
         </Style>
+        
+        <!-- A style for the two buttons in the CreateScheduleControl -->
+        <Style x:Key="scheduleButton" TargetType="Button">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="28"/>
+        </Style>
     </Application.Resources>
 </Application>
