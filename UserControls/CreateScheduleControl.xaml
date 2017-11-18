@@ -27,6 +27,7 @@
         <!-- Buttons for the update schedule/generate schedule -->
         <!-- For some odd reason it is not possible to add the custom margin determining the top,left,right,bottom values specifically -->
         <!-- The "generateSchedule" Buttons Content, "Auto-Lav Program", might be subject to change later on. I was unsure how you spelled "generateSchedule" in danish -->
+        <!-- The "generateSchedule" Button makes sense so that the administrator can edit the cells in the datagrid and update it in the database and thereby in the web api -->
         <Button x:Name="updateSchedule" Content="Opdatér Program" Grid.Column="1" Grid.Row="2"  Style="{StaticResource scheduleButton}" Margin="12, 12, 12, 5"/>
         <Button x:Name="generateSchedule" Content="Auto-Lav Program" Grid.Column="2" Grid.Row="2"  Style="{StaticResource scheduleButton}" Margin="12, 12, 12, 5"/>
 

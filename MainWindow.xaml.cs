@@ -29,6 +29,29 @@ namespace YoungEnterprise_Admin_Application
         //   Such as the CreateScheduleControl's layout
         //   and also the ViewUsersControl's layout
 
+        // Layout 1, with datagrid (CreateScheduleControl.xaml & ViewUsersControl.xaml)
+        // ColumnDefinitions:
+        // Subject to change, however they should always add up to 13, with a 0.5* autowidth in the left and the right side.
+        // RowDefinitions:
+        // 1.5*
+        // 1*
+        // 1*
+        // 5.5*
+
+        // Layout 2, without datagrid in the invite usercontrols (InviteJudgeControl.xaml, InviteSchoolControl.xaml)
+        // ColumnDefinitions:
+        // 1*
+        // 2*
+        // 1*
+        // RowDefinitions:
+        // 1.5*
+        // 1.5*
+        // 1*
+        // 1*
+        // 1*
+        // 2*
+        // 1*
+
         public MainWindow()
         {
             InitializeComponent();

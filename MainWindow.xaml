@@ -7,10 +7,9 @@
         xmlns:controls="clr-namespace:YoungEnterprise_Admin_Application.UserControls"
         mc:Ignorable="d"
         Title="YoungEnterprise Administration Application" Height="600" Width="800">
-    <!-- Replaced the default grid with a dockpanel to allow for the menu to resize properly -->
+    <!-- Replaced the default grid with a dockpanel to allow for the menu to resize as intended -->
     <!-- The grid containing the content is inside the dockpanel below the menu -->
     <DockPanel>
-        
         <!-- The menu below can be changed later on! -->
         <Menu DockPanel.Dock="Top" Background="#969696" FontFamily="Arial" FontSize="20">
             <MenuItem Header="Brugere">
@@ -39,7 +38,7 @@
             <controls:ViewUsersControl Visibility="Hidden"/>
             <controls:CreateScheduleControl Visibility="Visible"/>
             <controls:InviteJudgeControl Visibility="Hidden"/>
-
+            <controls:InviteSchoolControl Visibility="Hidden"/>
         </Grid>
     </DockPanel>
 </Window>
