@@ -43,5 +43,20 @@
             <Setter Property="FontFamily" Value="Arial"/>
             <Setter Property="FontSize" Value="28"/>
         </Style>
+
+        <!-- A style for the search textboxes in ViewUsersControl and ViewResultsControl (so far) -->
+        <!-- Since you can't change margins specifics in the style, this needs to be applied where nessecary Margin="12, 20, 12, 4" -->
+        <Style x:Key="searchTextBox" TargetType="TextBox">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="22"/>
+        </Style>
+        
+        <!-- A style for the search buttons in the ViewUsersControl and ViewResultsControl (so far) -->
+        <!-- Since you can't change margins specifics in the style, this needs to be applied where nessecary Margin="12, 20, 12, 4" -->
+        <Style x:Key="searchButton" TargetType="Button">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="26"/>
+        </Style>
     </Application.Resources>
 </Application>

@@ -52,6 +52,8 @@ namespace YoungEnterprise_Admin_Application
         // 2*
         // 1*
 
+        // Discuss on monday: ViewResultsControl.
+
         public MainWindow()
         {
             InitializeComponent();
