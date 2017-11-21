@@ -35,7 +35,8 @@
 
         <Grid DockPanel.Dock="Bottom">
             <!-- User Controls -->
-            <controls:ViewUsersControl Visibility="Visible"/>
+            <controls:ViewResultsControl Visibility="Visible"/>
+            <controls:ViewUsersControl Visibility="Hidden"/>
             <controls:CreateScheduleControl Visibility="Hidden"/>
             <controls:InviteUserControl Visibility="Hidden"/>
         </Grid>
