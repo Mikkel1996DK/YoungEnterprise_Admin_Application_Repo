@@ -4,7 +4,6 @@
              xmlns:local="clr-namespace:YoungEnterprise_Admin_Application"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-
         <!-- A style for all the headers in the invite UserControls -->
         <Style x:Key="headerLabel" TargetType="Label">
             <Setter Property="FontFamily" Value="Arial"/>
@@ -35,7 +34,7 @@
         <Style x:Key="inviteButton" TargetType="Button">
             <Setter Property="FontFamily" Value="Arial"/>
             <Setter Property="FontSize" Value="28"/>
-            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Margin" Value="10"/>
         </Style>
         
         <!-- A style for the two buttons in the CreateScheduleControl -->
@@ -56,7 +55,17 @@
         <!-- Since you can't change margins specifics in the style, this needs to be applied where nessecary Margin="12, 20, 12, 4" -->
         <Style x:Key="searchButton" TargetType="Button">
             <Setter Property="FontFamily" Value="Arial"/>
-            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="FontSize" Value="24"/>
         </Style>
+        
+        <!-- A style for the radiobuttons in the inviteusercontrol -->
+        <Style x:Key="selectUserRadioButton" TargetType="RadioButton">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+        
     </Application.Resources>
 </Application>
