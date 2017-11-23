@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using YoungEnterprise_Admin_Application.UserControls;
 
 namespace YoungEnterprise_Admin_Application
 {
@@ -52,11 +53,20 @@ namespace YoungEnterprise_Admin_Application
         // 2*
         // 1*
 
-        // Discuss on monday: ViewResultsControl.
+        private CreateScheduleControl createScheduleControl;
+        private InviteUserControl inviteUserControl;
+        private ViewResultsControl viewResultsControl;
+        private ViewUsersControl viewUsersControl;
 
         public MainWindow()
         {
             InitializeComponent();
+            userControlGrid.Children.Add(viewUsersControl);
+        }
+
+        public void ShiftUserControl ()
+        {
+
         }
     }
 }

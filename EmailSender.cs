@@ -12,10 +12,10 @@ namespace YoungEnterprise_Admin_Application
     {
         // The SmtpClient in order to send the email
         // The MailMessage to send to the recipient
+        // The senderAddress in order to store the senders email to send multiple in a row.
         private SmtpClient client = null;
         private MailMessage mailMessage = null;
-
-        private string senderAddress;
+        public string senderAddress = "";
         
         public EmailSender(string mailHost, int mailPort, bool enableSSL, string senderEmail, string senderPassword)
         {
@@ -46,6 +46,5 @@ namespace YoungEnterprise_Admin_Application
             // Sets the mailmessage to null which is the mailMessage's initial state
             mailMessage = null;
         }
-
     }
 }

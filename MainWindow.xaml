@@ -33,12 +33,12 @@
             </MenuItem>
         </Menu>
 
-        <Grid DockPanel.Dock="Bottom">
+        <Grid x:Name="userControlGrid" DockPanel.Dock="Bottom">
             <!-- User Controls -->
-            <controls:ViewResultsControl Visibility="Visible"/>
+            <controls:ViewResultsControl Visibility="Hidden"/>
             <controls:ViewUsersControl Visibility="Hidden"/>
             <controls:CreateScheduleControl Visibility="Hidden"/>
-            <controls:InviteUserControl Visibility="Hidden"/>
+            <controls:InviteUserControl Visibility="Visible"/>
         </Grid>
     </DockPanel>
 </Window>
