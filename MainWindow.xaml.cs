@@ -21,6 +21,7 @@ namespace YoungEnterprise_Admin_Application
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region IMPORTANT COMMENT IN THIS REGION
         //TODO: Have a look at this in order to check how to generate unique passwords for users!
         // https://stackoverflow.com/questions/54991/generating-random-passwords
         // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -52,11 +53,12 @@ namespace YoungEnterprise_Admin_Application
         // 1*
         // 2*
         // 1*
+        #endregion
 
-        private CreateScheduleControl createScheduleControl;
-        private InviteUserControl inviteUserControl;
-        private ViewResultsControl viewResultsControl;
-        private ViewUsersControl viewUsersControl;
+        private CreateScheduleControl createScheduleControl = new CreateScheduleControl();
+        private InviteUserControl inviteUserControl = new InviteUserControl();
+        private ViewResultsControl viewResultsControl = new ViewResultsControl();
+        private ViewUsersControl viewUsersControl = new ViewUsersControl();
 
         public MainWindow()
         {
@@ -64,9 +66,33 @@ namespace YoungEnterprise_Admin_Application
             userControlGrid.Children.Add(viewUsersControl);
         }
 
-        public void ShiftUserControl ()
+        // Shifts a usercontrol with another usercontrol
+        public void ShiftUserControl (Control userControl)
         {
-
+            userControlGrid.Children.Clear();
+            userControlGrid.Children.Add(userControl);
         }
+
+        #region menuitem eventhandlers that should only run the ShiftUserControl(Control userControl) method.
+        private void viewAllUsers_Click(object sender, RoutedEventArgs e)
+        {
+            ShiftUserControl(viewUsersControl);
+        }
+
+        private void inviteUser_Click(object sender, RoutedEventArgs e)
+        {
+            ShiftUserControl(inviteUserControl);
+        }
+
+        private void viewResults_Click(object sender, RoutedEventArgs e)
+        {
+            ShiftUserControl(viewResultsControl);
+        }
+
+        private void createSchedule_Click(object sender, RoutedEventArgs e)
+        {
+            ShiftUserControl(createScheduleControl);
+        }
+        #endregion
     }
 }
