@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EmailSender.cs" />
     <Compile Include="UserControls\CreateScheduleControl.xaml.cs">
       <DependentUpon>CreateScheduleControl.xaml</DependentUpon>
     </Compile>
