@@ -44,7 +44,7 @@
         
         
         <!-- Name/Email Textboxes -->
-        <TextBox x:Name="userNameTextBox" Grid.Column="1" Grid.Row="2" Style="{StaticResource inviteTextBox}" Text="{Binding Name}"/>
+        <TextBox x:Name="userNameTextBox" Grid.Column="1" Grid.Row="2" Style="{StaticResource inviteTextBox}" Text="{Binding NameText}"/>
         <TextBox x:Name="userEmailTextBox" Grid.Column="1" Grid.Row="3" Style="{StaticResource inviteTextBox}" Text="{Binding Email}"/>
 
         <!-- Send Invite Button -->

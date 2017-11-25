@@ -28,12 +28,12 @@ namespace YoungEnterprise_Admin_Application.UserControls
         // email async just to run the test (which is not what we want to do)
 
         #region expand/collapse name/email/isJudge variables used for databinding
-        private string name;
-        public string Name
+        private string nameText;
+        public string NameText
         {
-            get { return name; }
-            set { name = value;
-                if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs("Name"));
+            get { return nameText; }
+            set { nameText = value;
+                if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs("NameText"));
             }
         }
 
@@ -75,8 +75,6 @@ namespace YoungEnterprise_Admin_Application.UserControls
             // pass: yprise987
             mailSender = new EmailSender("smtp.gmail.com", 587, true, "youngenterprise.mail1379@gmail.com", "yprise987");
 
-            Console.WriteLine(email + "  " + name);
-
             if (isSchool)
             {
                 SendSchoolEmail();
@@ -84,21 +82,19 @@ namespace YoungEnterprise_Admin_Application.UserControls
             {
                 SendJudgeEmail();
             }
-
-            Console.WriteLine("TEST PASSED!");
         }
 
         // A method to send a judge email (as the content of the mail needs to be different from the school email)
         private void SendJudgeEmail ()
         {
-            mailSender.SendMail(email, "Young Enterprise | Dommer Invitiation", "Hej " + name + "! Du er hermed inviteret til at blive dommer!");
+            mailSender.SendMail(email, "Young Enterprise | Dommer Invitiation", nameText, email);
             mailSender = null;
         }
 
         // A method to send a school email (as the content of the mail needs to be different from the judge email)
         private void SendSchoolEmail()
         {
-            mailSender.SendMail(email, "Young Enterprise | Skole Invitiation", "Hej " + name + "! Du er hermed inviteret til at tilføje dine teams til eventet!");
+            mailSender.SendMail(email, "Young Enterprise | Skole Invitiation", nameText, email);
             mailSender = null;
         }
     }
