@@ -12,7 +12,9 @@ namespace ServiceTest
         public void TestHashPassword()
         {
             //e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 = "TESTPASSWORD"
-            Assert.AreEqual("e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", HashPassword("TESTPASSWORD"));
+            //Username = "TESTUSERNAME"
+            //Outcomment underneath when method "HashPassword" is made.
+            //Assert.AreEqual("e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", HashPassword("TESTUSERNAME", "TESTPASSWORD"));
         }
 
     }
