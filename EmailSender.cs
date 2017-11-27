@@ -19,7 +19,7 @@ namespace YoungEnterprise_Admin_Application
         public string senderAddress = "";
 
         // Used for testing, if false it will send en email like normal. if true it will run tests and not send an email.
-        private bool isTesting = true;
+        private bool isTesting = false;
         
 
 
