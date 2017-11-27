@@ -11,8 +11,11 @@ namespace ServiceTest
         [TestMethod]
         public void TestRandomPassword()
         {
-            emailService = new EmailService(null, 0, false, null, null);
-            Assert.IsTrue(RandomPasswordTest(emailService.GetRandomPassword(8), 8));
+            emailService = new EmailService("smtp.gmail.com", 587, true, "youngenterprise.mail1379@gmail.com", "yprise987");
+
+            string pw = emailService.GetRandomPassword(8);
+
+            Assert.IsTrue(RandomPasswordTest(pw, 8));
         }
 
         private bool RandomPasswordTest(string pw, int expectedLength)
