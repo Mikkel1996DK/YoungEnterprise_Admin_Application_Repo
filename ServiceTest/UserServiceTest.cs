@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Service;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,13 +9,15 @@ namespace ServiceTest
     [TestClass]
     public class UserServiceTest
     {
+        private UserService service = new UserService();
+
         [TestMethod]
         public void TestHashPassword()
         {
-            //e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 = "TESTPASSWORD"
+            //Expected: ed050212b5c7a07d0052be42c5f435b2b061d4ce72e4db559278bf485fe81ec4
             //Username = "TESTUSERNAME"
-            //Outcomment underneath when method "HashPassword" is made.
-            //Assert.AreEqual("e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", HashPassword("TESTUSERNAME", "TESTPASSWORD"));
+            //Password = "TESTPASSWORD"
+            Assert.AreEqual("ed050212b5c7a07d0052be42c5f435b2b061d4ce72e4db559278bf485fe81ec4", service.HashPassword("TESTUSERNAME", "TESTPASSWORD"));
         }
 
     }
