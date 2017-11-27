@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -68,7 +69,7 @@ namespace YoungEnterprise_Admin_Application.Views
         }
         #endregion
 
-        private EmailSender mailSender = null;
+        private EmailService mailSender = null;
 
         // A simple method that should run on click of the Send Invite button
         private void SendEmail(object sender, RoutedEventArgs e)
@@ -79,7 +80,7 @@ namespace YoungEnterprise_Admin_Application.Views
             // ssl: enable SSL
             // user: youngenterprise.mail1379@gmail.com
             // pass: yprise987
-            mailSender = new EmailSender("smtp.gmail.com", 587, true, "youngenterprise.mail1379@gmail.com", "yprise987");
+            mailSender = new EmailService("smtp.gmail.com", 587, true, "youngenterprise.mail1379@gmail.com", "yprise987");
 
             if (isSchool)
             {
@@ -94,14 +95,14 @@ namespace YoungEnterprise_Admin_Application.Views
         // A method to send a judge email (as the content of the mail needs to be different from the school email)
         private void SendJudgeEmail()
         {
-            mailSender.SendMail(email, "Young Enterprise | Dommer Invitiation", nameText, email);
+            mailSender.SendInviteMail(email, "Young Enterprise | Dommer Invitiation", nameText, email);
             mailSender = null;
         }
 
         // A method to send a school email (as the content of the mail needs to be different from the judge email)
         private void SendSchoolEmail()
         {
-            mailSender.SendMail(email, "Young Enterprise | Skole Invitiation", nameText, email);
+            mailSender.SendInviteMail(email, "Young Enterprise | Skole Invitiation", nameText, email);
             mailSender = null;
         }
     }
