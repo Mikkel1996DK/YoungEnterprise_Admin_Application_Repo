@@ -34,7 +34,8 @@
         </Menu>
 
         <Grid x:Name="userControlGrid" DockPanel.Dock="Bottom">
-            
+
         </Grid>
     </DockPanel>
 </Window>
+
