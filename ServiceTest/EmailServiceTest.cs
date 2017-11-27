@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Service;
 
@@ -13,6 +14,7 @@ namespace ServiceTest
         {
             emailService = new EmailService(null, 0, false, null, null);
             Assert.IsTrue(RandomPasswordTest(emailService.GetRandomPassword(8), 8));
+            Console.Write("hello");
         }
 
         private bool RandomPasswordTest(string pw, int expectedLength)
