@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using YoungEnterprise_Admin_Application.UserControls;
+using YoungEnterprise_Admin_Application.Views;
 
 namespace YoungEnterprise_Admin_Application
 {
@@ -55,10 +55,11 @@ namespace YoungEnterprise_Admin_Application
         // 1*
         #endregion
 
-        private CreateScheduleControl createScheduleControl = new CreateScheduleControl();
-        private InviteUserControl inviteUserControl = new InviteUserControl();
-        private ViewResultsControl viewResultsControl = new ViewResultsControl();
-        private ViewUsersControl viewUsersControl = new ViewUsersControl();
+
+        private CreateScheduleView createScheduleControl = new CreateScheduleView();
+        private InviteUserView inviteUserControl = new InviteUserView();
+        private ResultView viewResultsControl = new ResultView();
+        private UserDisplayView viewUsersControl = new UserDisplayView();
 
         public MainWindow()
         {
