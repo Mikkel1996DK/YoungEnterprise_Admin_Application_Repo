@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace YoungEnterprise_Admin_Application.UserControls
+namespace YoungEnterprise_Admin_Application.Views
 {
     /// <summary>
-    /// Interaction logic for ViewResultsControl.xaml
+    /// Interaction logic for UserDisplayView.xaml
     /// </summary>
-    public partial class ViewResultsControl : UserControl
+    public partial class UserDisplayView : UserControl
     {
-        public ViewResultsControl()
+        public UserDisplayView()
         {
             InitializeComponent();
         }

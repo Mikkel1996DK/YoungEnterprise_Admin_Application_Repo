@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace YoungEnterprise_Admin_Application.UserControls
+namespace YoungEnterprise_Admin_Application.Views
 {
     /// <summary>
-    /// Interaction logic for ViewUsersControl.xaml
+    /// Interaction logic for CreateScheduleView.xaml
     /// </summary>
-    public partial class ViewUsersControl : UserControl
+    public partial class CreateScheduleView : UserControl
     {
-        public ViewUsersControl()
+        public CreateScheduleView()
         {
             InitializeComponent();
         }

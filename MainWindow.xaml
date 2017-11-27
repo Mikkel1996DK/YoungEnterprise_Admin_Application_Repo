@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YoungEnterprise_Admin_Application"
-        xmlns:controls="clr-namespace:YoungEnterprise_Admin_Application.UserControls"
+        xmlns:controls="clr-namespace:YoungEnterprise_Admin_Application.Views"
         mc:Ignorable="d"
         Title="YoungEnterprise Administration Application" Height="600" Width="800">
     <!-- Replaced the default grid with a dockpanel to allow for the menu to resize as intended -->

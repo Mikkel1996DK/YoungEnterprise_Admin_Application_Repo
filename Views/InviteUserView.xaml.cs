@@ -14,13 +14,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace YoungEnterprise_Admin_Application.UserControls
+namespace YoungEnterprise_Admin_Application.Views
 {
     /// <summary>
-    /// Interaction logic for InviteUserControl.xaml
+    /// Interaction logic for InviteUserView.xaml
     /// </summary>
-    public partial class InviteUserControl : UserControl, INotifyPropertyChanged
+    public partial class InviteUserView : UserControl
     {
+        public InviteUserView()
+        {
+            InitializeComponent();
+            DataContext = this;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         // The test we will be doing for this one is just to check if the user has been added to the database when time comes to that.
@@ -32,7 +38,9 @@ namespace YoungEnterprise_Admin_Application.UserControls
         public string NameText
         {
             get { return nameText; }
-            set { nameText = value;
+            set
+            {
+                nameText = value;
                 if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs("NameText"));
             }
         }
@@ -41,7 +49,9 @@ namespace YoungEnterprise_Admin_Application.UserControls
         public string Email
         {
             get { return email; }
-            set { email = value;
+            set
+            {
+                email = value;
                 if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs("Email"));
             }
         }
@@ -50,7 +60,9 @@ namespace YoungEnterprise_Admin_Application.UserControls
         public bool IsSchool
         {
             get { return isSchool; }
-            set { isSchool = value;
+            set
+            {
+                isSchool = value;
                 if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs("IsSchool"));
             }
         }
@@ -58,14 +70,8 @@ namespace YoungEnterprise_Admin_Application.UserControls
 
         private EmailSender mailSender = null;
 
-        public InviteUserControl()
-        {
-            InitializeComponent();
-            DataContext = this;
-        }
-
         // A simple method that should run on click of the Send Invite button
-        private void SendEmail (object sender, RoutedEventArgs e)
+        private void SendEmail(object sender, RoutedEventArgs e)
         {
             // DO NOT DELETE COMMENTS BELOW THIS COMMENT:
             // gmail smtp server: smtp.gmail.com
@@ -78,14 +84,15 @@ namespace YoungEnterprise_Admin_Application.UserControls
             if (isSchool)
             {
                 SendSchoolEmail();
-            } else
+            }
+            else
             {
                 SendJudgeEmail();
             }
         }
 
         // A method to send a judge email (as the content of the mail needs to be different from the school email)
-        private void SendJudgeEmail ()
+        private void SendJudgeEmail()
         {
             mailSender.SendMail(email, "Young Enterprise | Dommer Invitiation", nameText, email);
             mailSender = null;
@@ -99,3 +106,6 @@ namespace YoungEnterprise_Admin_Application.UserControls
         }
     }
 }
+
+    
+

@@ -59,17 +59,17 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="EmailSender.cs" />
-    <Compile Include="UserControls\CreateScheduleControl.xaml.cs">
-      <DependentUpon>CreateScheduleControl.xaml</DependentUpon>
+    <Compile Include="Views\CreateScheduleView.xaml.cs">
+      <DependentUpon>CreateScheduleView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\InviteUserControl.xaml.cs">
-      <DependentUpon>InviteUserControl.xaml</DependentUpon>
+    <Compile Include="Views\InviteUserView.xaml.cs">
+      <DependentUpon>InviteUserView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ViewResultsControl.xaml.cs">
-      <DependentUpon>ViewResultsControl.xaml</DependentUpon>
+    <Compile Include="Views\ResultView.xaml.cs">
+      <DependentUpon>ResultView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ViewUsersControl.xaml.cs">
-      <DependentUpon>ViewUsersControl.xaml</DependentUpon>
+    <Compile Include="Views\UserDisplayView.xaml.cs">
+      <DependentUpon>UserDisplayView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -83,19 +83,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserControls\CreateScheduleControl.xaml">
+    <Page Include="Views\CreateScheduleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\InviteUserControl.xaml">
+    <Page Include="Views\InviteUserView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\ViewResultsControl.xaml">
+    <Page Include="Views\ResultView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\ViewUsersControl.xaml">
+    <Page Include="Views\UserDisplayView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -125,6 +125,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
